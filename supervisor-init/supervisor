@@ -69,7 +69,6 @@ do_start()
     [ "$VERBOSE" != no ] && log_daemon_msg "Starting $DESC" "$NAME"
 
     [ -e $PIDFILE ] && return 1
-    echo "$PIDFILE $DAEMON $DAEMON_ARGS"
     start-stop-daemon --start --quiet --pidfile $PIDFILE --exec $DAEMON -- \
         $DAEMON_ARGS \
         || return 2
