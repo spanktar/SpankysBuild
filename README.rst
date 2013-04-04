@@ -88,6 +88,13 @@ These buildouts show off a few features you might find useful:
     using only one part, then overriding the values that are specific to that
     part.  We also make heavy use of "${:_buildout_section_name_}" which is
     super useful.
+    
+* Buildout init script
+	This buildout will install one supervisor instance for each runfile, which
+	may seem weird but if you think about it for a minute makes sense.  They
+	run on separate ports, by default, determined by the port-suffix.
+	This init script will start all instances.  Just update the "instances"
+	variable if you add a new one.
 
 
 Usage
