@@ -39,6 +39,12 @@ Features
 
 These buildouts show off a few features you might find useful:
 
+* Versions symlink for isolating different releases
+	The file versions.cfg is a symlink to whichever versions file
+	you need for a particular build.  In our case, we are upgrading
+	from one to the other so being able to quickly change just this
+	symlink without messing w/anything else is great. 
+
 *Setting environment variables*
     In the Zope part, I set some environment variables that then can be used
     from within Plone.  For example, we set the API server name, used when my
